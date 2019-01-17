@@ -1,0 +1,49 @@
+.header {
+    height: 110vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 .5rem 2rem rgba(0,0,0,.4);
+    background-color: var(--color-primary);
+    overflow: hidden;
+
+}
+
+.about {
+    height: 110vh;
+    width: 100%;
+    min-height: 80rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        height: 120vh;
+    }
+}
+
+.skills {
+    width: 100%;
+    padding: 20rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 10rem 0;
+    }
+}
+
+.work {
+    width: 100%;
+}
+
+.contact {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
