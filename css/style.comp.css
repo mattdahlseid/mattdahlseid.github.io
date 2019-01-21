@@ -89,7 +89,7 @@ a {
 .cutout {
   width: 110%;
   height: 110%;
-  background-image: url(../img/cutout.png);
+  background-image: url("../img/cutout.png");
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -105,11 +105,10 @@ a {
   width: 60%;
   height: 70%;
   margin-top: 12rem;
-  background: linear-gradient(to right bottom, var(--color-black), transparent, transparent, var(--color-black)), url("../img/glacier_me.jpg");
+  background-image: url("../img/glacier.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: left;
   transition: all .4s;
-  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
   border: 1.7rem solid #000;
   z-index: 2;
   filter: contrast(120%); }
@@ -130,11 +129,11 @@ a {
   height: 53%;
   background: linear-gradient(to right, #35A926, #D5F21B);
   position: absolute;
-  margin-top: 30rem;
-  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.3); }
+  margin-top: 30rem; }
   @media only screen and (max-width: 56.25em) {
     .square {
-      min-width: 90%; } }
+      min-width: 90%;
+      margin-top: 20rem; } }
 
 .hero-title {
   display: flex;
@@ -250,9 +249,11 @@ a {
   background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
   transform: rotate(90deg);
   margin-left: -11vw;
-  box-shadow: 1rem -1rem 2rem rgba(0, 0, 0, 0.3);
   border: 2rem solid #000;
   transition: all 1s; }
+  @media (hover: hover) {
+    .shape {
+      box-shadow: 1rem -1rem 2rem rgba(0, 0, 0, 0.3); } }
   @media only screen and (max-width: 56.25em) {
     .shape {
       display: none; } }
@@ -306,10 +307,10 @@ a {
     .work__photo {
       height: 25vh; } }
   .work__photo-1 {
-    background-image: url(../img/clouds.jpg);
+    background-image: url("../img/clouds.jpg");
     background-position: 50% 20%; }
   .work__photo-2 {
-    background-image: url(../img/wet_windshield.jpg);
+    background-image: url("../img/wet_windshield.jpg");
     background-position: 50% 50%; }
 
 .work__title {
@@ -324,7 +325,6 @@ a {
   padding: 2rem 2vw 2rem 2vw;
   position: absolute;
   mix-blend-mode: multiply;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   transform: translateY(0);
   transform-origin: 50% 50%;
   transition: all .4s; }
@@ -332,8 +332,7 @@ a {
     .work__title {
       font-size: 10vw; } }
   .work__title:hover {
-    transform: translateY(-1rem) scale(1.02);
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8); }
+    transform: translateY(-1rem) scale(1.02); }
 
 .work__container {
   width: 100%; }
@@ -350,6 +349,7 @@ a {
     margin-top: 15rem; }
     @media only screen and (max-width: 37.5em) {
       .work__item:first-child {
+        margin-top: 10rem;
         margin-bottom: 2rem; } }
   @media only screen and (max-width: 68.75em) {
     .work__item {
@@ -358,7 +358,7 @@ a {
     .work__item {
       flex-direction: column;
       height: auto;
-      margin-bottom: 2rem; } }
+      margin-bottom: 0; } }
   @media only screen and (max-width: 37.5em) {
     .work__item {
       padding: 0 8%; } }
@@ -367,7 +367,6 @@ a {
     height: 100%;
     max-width: 50%;
     flex: 1 1 0;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
     transition: all .5s; }
     @media only screen and (max-width: 56.25em) {
       .work__item__photo {
@@ -377,8 +376,7 @@ a {
       .work__item__photo {
         max-width: 95%; } }
     .work__item__photo:hover {
-      transform: translateY(-1rem) scale(1.02);
-      box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6); }
+      transform: translateY(-1rem) scale(1.02); }
   .work__item__content {
     width: 50rem;
     padding: 0 10rem 0 0; }
@@ -411,13 +409,13 @@ a {
     font-size: 1.7rem; }
 
 .contact__img {
-  background: linear-gradient(to right bottom, var(--color-primary), transparent, var(--color-transparent), var(--color-secondary)), url("../img/nevada_falls.jpg") no-repeat bottom;
+  background-image: url("../img/nevada_falls.jpg");
   background-size: cover;
   background-position: 80% 60%;
   height: 100%;
   width: 100%;
   position: absolute;
-  filter: saturate(120%) brightness(70%); }
+  filter: saturate(120%) brightness(80%); }
 
 .contact__title {
   font-size: 14vw;
@@ -494,13 +492,11 @@ a {
   letter-spacing: .1rem;
   background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
   color: white;
-  box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.5);
   transform: translateY(0); }
   .link:hover {
     color: white; }
   .link:active {
-    transform: translateY(0.2rem);
-    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); }
+    transform: translateY(0.2rem); }
 
 .btn {
   padding: 1.6rem 2rem 1.8rem 2rem;
@@ -516,15 +512,13 @@ a {
   background: black;
   color: white;
   margin-top: 2.6rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   transform: translateY(0);
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) right bottom #000 no-repeat;
   background-size: 100% 4px; }
   .btn:hover {
     color: white; }
   .btn:active {
-    transform: translateY(0.2rem);
-    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5); }
+    transform: translateY(0.2rem); }
 
 .left {
   text-align: left; }
@@ -544,6 +538,23 @@ a {
 .left {
   object-position: left; }
 
+@media (hover: hover) {
+  .box-shadow {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); } }
+
+@media (hover: hover) {
+  .box-shadow:hover {
+    transform: translateY(-1rem) scale(1.02);
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6); } }
+
+@media (hover: hover) {
+  .btn-shadow {
+    box-shadow: 0.2rem 0.25rem 1rem rgba(0, 0, 0, 0.4); } }
+
+@media (hover: hover) {
+  .btn-shadow:active {
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5); } }
+
 .responsive-nav {
   height: 100vh;
   width: 100%;
@@ -554,8 +565,7 @@ a {
   justify-content: center;
   align-items: center;
   right: -110%;
-  transition: all .5s;
-  box-shadow: -1rem 2rem 4rem rgba(0, 0, 0, 0.5); }
+  transition: all .5s; }
   .responsive-nav ul {
     list-style: none;
     font-size: 4rem;
@@ -596,13 +606,15 @@ a {
   background-color: var(--color-black);
   color: var(--color-white);
   padding: 1.4rem 2rem 4rem 2rem;
-  box-shadow: 0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.4);
   border: 2px solid #000;
   z-index: 100;
   display: flex;
   transform: rotate(90deg);
   transition: all .3s;
   cursor: pointer; }
+  @media (hover: hover) {
+    .nav__button {
+      box-shadow: 0.4rem -0.4rem 1rem rgba(0, 0, 0, 0.4); } }
   @supports (-moz-appearance: none) {
     .nav__button {
       height: 7rem; } }
@@ -643,8 +655,7 @@ a {
       right: 2rem; } }
 
 .rotate {
-  transform: rotate(135deg);
-  box-shadow: -0.4rem -1rem 3rem rgba(0, 0, 0, 0.5); }
+  transform: rotate(135deg); }
 
 .scale {
   transform: scale(1.05); }

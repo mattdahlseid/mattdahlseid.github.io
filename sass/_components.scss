@@ -90,7 +90,7 @@
 .cutout {
     width: 110%;
     height: 110%;
-    background-image: url(../img/cutout.png);
+    background-image: url("../img/cutout.png");
     position: absolute;
     background-size: cover;
     background-position: center;
@@ -108,11 +108,10 @@
     width: 60%;
     height: 70%;
     margin-top: 12rem;
-    background-image: url("../img/glacier_gradient.jpg");
+    background-image: url("../img/glacier.jpg");
     background-size: cover;
     background-position: left;
     transition: all .4s;
-    // box-shadow: 1rem 1rem 2rem rgba(0,0,0,.5);
     border: 1.7rem solid #000;
     z-index: 2;
     filter: contrast(120%);
@@ -137,7 +136,6 @@
     background: linear-gradient(to right, #35A926, #D5F21B);
     position: absolute;
     margin-top: 30rem;
-    // // box-shadow: 1rem 1rem 3rem rgba(0,0,0,.3);
 
     @media only screen and (max-width: $bp-medium) {
         min-width: 90%;
@@ -368,12 +366,12 @@
         }
 
         &-1 {
-            background-image: url(../img/clouds.jpg);
+            background-image: url("../img/clouds.jpg");
             background-position: 50% 20%;
         }
 
         &-2 {
-            background-image: url(../img/wet_windshield.jpg);
+            background-image: url("../img/wet_windshield.jpg");
             background-position: 50% 50%;
         }
     }
@@ -390,7 +388,6 @@
         padding: 2rem 2vw 2rem 2vw;
         position: absolute;
         mix-blend-mode: multiply;
-        // box-shadow: 0 1rem 3rem rgba(0,0,0,.5);
         transform: translateY(0);
         transform-origin: 50% 50%;
         transition: all .4s;
@@ -401,7 +398,6 @@
     
         &:hover {
             transform: translateY(-1rem) scale(1.02);
-            // box-shadow: 0 2rem 4rem rgba(0,0,0,.8);
         }
     }
 
@@ -613,7 +609,6 @@
     letter-spacing: .1rem;
     background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
     color: white;
-    // box-shadow: 0 .3rem 1.5rem rgba(0,0,0,.5);
     transform: translateY(0);
 
     &:hover {
@@ -622,7 +617,6 @@
 
     &:active {
         transform: translateY(.2rem);
-        // box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
     }
 }
 
@@ -718,8 +712,6 @@
     align-items: center;
     right: -110%;
     transition: all .5s;
-    // box-shadow: -1rem 2rem 4rem rgba(0,0,0,.5);
-    //border-left: 30rem solid #000;
 
     & ul {
         list-style: none;
@@ -746,7 +738,6 @@
                 position: absolute;
                 background: #000;
                 transform: skewX(-20deg);
-                //// box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
                 height: inherit;
                 width: 0;
                 left: 0;
@@ -835,7 +826,6 @@
 
 .rotate {
     transform: rotate(135deg);
-    // box-shadow: -.4rem -1rem 3rem rgba(0,0,0,.5);
 }
 
 .scale {
