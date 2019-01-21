@@ -27,7 +27,12 @@ a {
 .nav {
   list-style: none;
   font-size: 2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
   position: absolute;
   top: 4rem;
@@ -69,6 +74,10 @@ a {
         top: -1rem;
         transition: all .25s;
         z-index: -1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         margin-left: -20%;
         border-top: 4px solid #D5F21B; }
@@ -134,11 +143,21 @@ a {
     .square {
       min-width: 90%;
       margin-top: 20rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .square {
+      min-width: 90%;
+      margin-top: 25rem; } }
 
 .hero-title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   position: absolute;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
   justify-content: center;
   z-index: 11;
   width: fit-content;
@@ -203,7 +222,7 @@ a {
         width: 85%; } }
 
 .about__img {
-  background: linear-gradient(to right bottom, var(--color-black), transparent, var(--color-transparent), var(--color-black)), url("../img/night_dunes.jpg");
+  background-image: url("../img/night_dunes.jpg");
   background-size: cover;
   background-position: right;
   height: 100%;
@@ -215,7 +234,12 @@ a {
       background-position: center; } }
 
 .bio {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 52rem;
   position: absolute;
@@ -260,12 +284,20 @@ a {
 
 .skills-container {
   width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-evenly;
   justify-content: space-evenly; }
   @media only screen and (max-width: 56.25em) {
     .skills-container {
+      -webkit-flex-direction: column;
       flex-direction: column;
+      -webkit-justify-content: center;
       justify-content: center;
+      -webkit-align-items: center;
       align-items: center; } }
 
 @supports (-ms-ime-align: auto) {
@@ -300,8 +332,14 @@ a {
   background-size: cover;
   width: 100%;
   height: 60vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center; }
   @media only screen and (max-width: 56.25em) {
     .work__photo {
@@ -340,7 +378,12 @@ a {
 .work__item {
   width: 100%;
   height: 50rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
   font-size: 2rem;
   padding: 0 15vw;
@@ -478,7 +521,12 @@ a {
   text-align: center; }
 
 .links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-top: 3rem;
   font-size: 1.6rem;
@@ -560,9 +608,15 @@ a {
   width: 100%;
   background: linear-gradient(to right top, var(--color-primary), var(--color-primary), var(--color-secondary));
   z-index: 99;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   position: fixed;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
   right: -110%;
   transition: all .5s; }
@@ -591,6 +645,10 @@ a {
         top: -1.7rem;
         transition: all .25s;
         z-index: -1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         margin-left: -20%;
         border-top: 4px solid var(--color-secondary);
@@ -608,6 +666,10 @@ a {
   padding: 1.4rem 2rem 4rem 2rem;
   border: 2px solid #000;
   z-index: 100;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   transform: rotate(90deg);
   transition: all .3s;
