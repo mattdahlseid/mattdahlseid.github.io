@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
 
 
 
-//  CHANGES COLOR OF HEADER BASED ON MOUSEMOVE
+ //CHANGES COLOR OF HEADER BASED ON MOUSEMOVE
 
 // const heroTitleOne = document.querySelector('.hero-title-1');
 // const heroTitleTwo = document.querySelector('.hero-title-2');

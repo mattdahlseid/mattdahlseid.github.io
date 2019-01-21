@@ -108,11 +108,11 @@
     width: 60%;
     height: 70%;
     margin-top: 12rem;
-    background: linear-gradient(to right bottom, var(--color-black), transparent, transparent, var(--color-black)), url("../img/glacier_me.jpg"); 
+    background-image: url("../img/glacier_gradient.jpg");
     background-size: cover;
-    background-position: top;
+    background-position: left;
     transition: all .4s;
-    box-shadow: 1rem 1rem 2rem rgba(0,0,0,.5);
+    // box-shadow: 1rem 1rem 2rem rgba(0,0,0,.5);
     border: 1.7rem solid #000;
     z-index: 2;
     filter: contrast(120%);
@@ -137,10 +137,11 @@
     background: linear-gradient(to right, #35A926, #D5F21B);
     position: absolute;
     margin-top: 30rem;
-    box-shadow: 1rem 1rem 3rem rgba(0,0,0,.3);
+    // // box-shadow: 1rem 1rem 3rem rgba(0,0,0,.3);
 
     @media only screen and (max-width: $bp-medium) {
         min-width: 90%;
+        margin-top: 20rem;
     }
 }
 
@@ -154,8 +155,8 @@
     bottom: 12rem;
     text-transform: uppercase;
     color: rgba(0,0,0,.6);
-    -webkit-text-stroke: 3px var(--color-yellow);;
-    text-stroke: 3px var(--color-yellow);;
+    -webkit-text-stroke: 3px var(--color-yellow);
+    text-stroke: 3px var(--color-yellow);
     text-shadow: 0 1rem 2rem rgba(0,0,0,.6);
     font-family: 'Raleway';
     font-weight: 700;
@@ -165,8 +166,8 @@
 
     @media only screen and (max-width: $bp-medium) {
         line-height: 12vw; 
-        -webkit-text-stroke: 1px var(--color-yellow);;
-        text-stroke: 1px var(--color-yellow);;
+        -webkit-text-stroke: 1px var(--color-yellow);
+        text-stroke: 1px var(--color-yellow);
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -179,7 +180,6 @@
     &-1 {
         transition: all .3s;
         opacity: .8;
-        //cursor: col-resize;
 
         &:hover {
             color: rgb(63, 247, 185);
@@ -187,13 +187,11 @@
             text-stroke: 3px #ff5f5f;
             transform: scale(1.04);
         }
-
     }
 
     &-2 { 
         transition: all .3s;
         opacity: .8;
-        //cursor: col-resize;
 
         &:hover {
             color: rgb(146, 18, 196);
@@ -209,7 +207,7 @@
         line-height: 7vw;
         -webkit-text-stroke: none;
         text-stroke: none;
-        color: var(--color-yellow);;
+        color: var(--color-yellow);
         text-shadow: 0 1rem 2rem rgba(0,0,0,1);
 
         &:hover {
@@ -291,9 +289,12 @@
     background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
     transform: rotate(90deg);
     margin-left: -11vw;
-    box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
     border: 2rem solid #000;
     transition: all 1s;
+
+    @media (hover: hover) {
+        box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
+    }
 
     @media only screen and (max-width: $bp-medium) {
         display: none;
@@ -389,7 +390,7 @@
         padding: 2rem 2vw 2rem 2vw;
         position: absolute;
         mix-blend-mode: multiply;
-        box-shadow: 0 1rem 3rem rgba(0,0,0,.5);
+        // box-shadow: 0 1rem 3rem rgba(0,0,0,.5);
         transform: translateY(0);
         transform-origin: 50% 50%;
         transition: all .4s;
@@ -400,7 +401,7 @@
     
         &:hover {
             transform: translateY(-1rem) scale(1.02);
-            box-shadow: 0 2rem 4rem rgba(0,0,0,.8);
+            // box-shadow: 0 2rem 4rem rgba(0,0,0,.8);
         }
     }
 
@@ -421,6 +422,7 @@
             margin-top: 15rem;
 
             @media only screen and (max-width: $bp-small) {
+                margin-top: 10rem;
                 margin-bottom: 2rem;
             }
         }
@@ -433,7 +435,7 @@
         @media only screen and (max-width: $bp-medium) {
             flex-direction: column;
             height: auto;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
         }
 
         @media only screen and (max-width: $bp-small) {
@@ -445,7 +447,6 @@
             height: 100%;
             max-width: 50%;
             flex: 1 1 0;
-            box-shadow: .5rem .5rem 1rem rgba(0,0,0,.4);
             transition: all .5s;
 
             @media only screen and (max-width: $bp-medium) {
@@ -459,7 +460,6 @@
 
             &:hover {
                 transform: translateY(-1rem) scale(1.02);
-                box-shadow: .5rem 1rem 2rem rgba(0,0,0,.6);
             }
         }
 
@@ -512,13 +512,14 @@
 .contact {
     
     &__img {
-        background: linear-gradient(to right bottom, var(--color-primary), transparent, var(--color-transparent), var(--color-secondary)), url("../img/nevada_falls.jpg") no-repeat bottom; 
+        
+        background-image: url("../img/nevada_falls.jpg");
         background-size: cover;
         background-position: 80% 60%;
         height: 100%;
         width: 100%;
         position: absolute;
-        filter: saturate(120%) brightness(70%);
+        filter: saturate(120%) brightness(80%);
     }
 
 
@@ -612,7 +613,7 @@
     letter-spacing: .1rem;
     background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
     color: white;
-    box-shadow: 0 .3rem 1.5rem rgba(0,0,0,.5);
+    // box-shadow: 0 .3rem 1.5rem rgba(0,0,0,.5);
     transform: translateY(0);
 
     &:hover {
@@ -621,7 +622,7 @@
 
     &:active {
         transform: translateY(.2rem);
-        box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+        // box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
     }
 }
 
@@ -639,7 +640,6 @@
     background: black;
     color: white;
     margin-top: 2.6rem;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
     transform: translateY(0);
     background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) right bottom #000 no-repeat; 
     background-size: 100% 4px ;
@@ -650,7 +650,6 @@
 
     &:active {
         transform: translateY(.2rem);
-        box-shadow: 0 .3rem .3rem rgba(0,0,0,.5);
     }
 }
 
@@ -681,6 +680,31 @@
     object-position: left;
 }
 
+.box-shadow {
+    @media (hover: hover) {
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    }
+
+    &:hover {
+        @media (hover: hover) {
+            transform: translateY(-1rem) scale(1.02);
+            box-shadow: .5rem 1rem 2rem rgba(0,0,0,.6);
+        }    
+    }
+}
+
+.btn-shadow {
+    @media (hover: hover) {
+        box-shadow: .2rem .25rem 1rem rgba(0,0,0,.4);
+    }
+
+    &:active {
+        @media (hover: hover) {
+        box-shadow: 0 .2rem .5rem rgba(0,0,0,.5);
+        }    
+    }
+}
+
 /////////////////////////////////////
 // RESPONSIVE NAV 
 .responsive-nav {
@@ -694,7 +718,7 @@
     align-items: center;
     right: -110%;
     transition: all .5s;
-    box-shadow: -1rem 2rem 4rem rgba(0,0,0,.5);
+    // box-shadow: -1rem 2rem 4rem rgba(0,0,0,.5);
     //border-left: 30rem solid #000;
 
     & ul {
@@ -722,7 +746,7 @@
                 position: absolute;
                 background: #000;
                 transform: skewX(-20deg);
-                //box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+                //// box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
                 height: inherit;
                 width: 0;
                 left: 0;
@@ -751,13 +775,16 @@
     background-color: var(--color-black);
     color: var(--color-white);
     padding: 1.4rem 2rem 4rem 2rem;
-    box-shadow: .4rem -.4rem 1rem rgba(0,0,0,.4);
     border: 2px solid #000;
     z-index: 100;
     display: flex;
     transform: rotate(90deg);
     transition: all .3s;
     cursor: pointer;
+
+    @media (hover:hover) {
+        box-shadow: .4rem -.4rem 1rem rgba(0,0,0,.4);
+    }
 
     @supports (-moz-appearance: none) {
         height: 7rem;
@@ -808,7 +835,7 @@
 
 .rotate {
     transform: rotate(135deg);
-    box-shadow: -.4rem -1rem 3rem rgba(0,0,0,.5);
+    // box-shadow: -.4rem -1rem 3rem rgba(0,0,0,.5);
 }
 
 .scale {
