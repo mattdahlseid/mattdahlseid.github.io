@@ -486,16 +486,18 @@
             object-fit: cover;
             height: 100%;
             max-width: 50%;
-            flex: 1 1 0;
+            flex: 1 1 50%;
             transition: all .5s;
 
             @media only screen and (max-width: $bp-medium) {
                 max-width: 80%;
+                flex: 1 1 80%;
                 order: -1;
             }
 
             @media only screen and (max-width: $bp-small) {
                 max-width: 95%;
+                flex: 1 1 95%;
             }
 
             &:hover {
@@ -504,6 +506,7 @@
         }
 
         &__content {
+            flex: 1 0 50%;
             width: 50rem;
             padding: 0 10rem 0 0;
 
