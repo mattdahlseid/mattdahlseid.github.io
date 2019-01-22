@@ -182,6 +182,7 @@
     color: rgba(0,0,0,.6);
     -webkit-text-stroke: 3px var(--color-yellow);
     text-stroke: 3px var(--color-yellow);
+    -webkit-text-shadow: 0 1rem 2rem rgba(0,0,0,.6);
     text-shadow: 0 1rem 2rem rgba(0,0,0,.6);
     font-family: 'Raleway';
     font-weight: 700;
@@ -233,6 +234,7 @@
         -webkit-text-stroke: none;
         text-stroke: none;
         color: var(--color-yellow);
+        -webkit-text-shadow: 0 1rem 2rem rgba(0,0,0,.4);
         text-shadow: 0 1rem 2rem rgba(0,0,0,.4);
 
         &:hover {
@@ -240,6 +242,7 @@
             -webkit-text-stroke: 1px #fff;
             text-stroke: 1px #fff;
             transform: scaleY(-1);
+            -webkit-text-shadow: 0 -1rem 2rem rgba(0,0,0,.4);
             text-shadow: 0 -1rem 2rem rgba(0,0,0,.4);
         }
 
@@ -356,6 +359,7 @@
         height: fit-content;
         text-align: center;
         float: right; 
+        height: 48rem;
 
         &:first-child {
             float: left;
@@ -598,6 +602,8 @@
         text-align: center;
         font-size: 2.5rem;
         line-height: 4rem;
+        -webkit-text-shadow: 0 1rem 1rem rgba(0,0,0,1);
+        text-shadow: 0 .3rem 1rem rgba(0,0,0,1);
 
         @media only screen and (max-width: $bp-small) {
             width: 80vw;
