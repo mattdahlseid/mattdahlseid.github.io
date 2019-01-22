@@ -167,7 +167,7 @@ a {
   justify-content: center;
   z-index: 11;
   width: fit-content;
-  bottom: 12rem;
+  bottom: 13rem;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.6);
   -webkit-text-stroke: 3px var(--color-yellow);
@@ -211,13 +211,13 @@ a {
     -webkit-text-stroke: none;
     text-stroke: none;
     color: var(--color-yellow);
-    text-shadow: 0 1rem 2rem black; }
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
     .hero-title-3:hover {
       color: #ff71e0;
       -webkit-text-stroke: 1px #fff;
       text-stroke: 1px #fff;
       transform: scaleY(-1);
-      text-shadow: 0 -1rem 2rem black; }
+      text-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4); }
     @media only screen and (max-width: 56.25em) {
       .hero-title-3 {
         font-size: 3.5vw;
@@ -372,8 +372,6 @@ a {
   @media only screen and (max-width: 56.25em) {
     .work__title {
       font-size: 10vw; } }
-  .work__title:hover {
-    transform: translateX(-50%) translateY(calc(-50% + 1rem)) scale(1.02); }
 
 .work__container {
   width: 100%; }
@@ -472,7 +470,9 @@ a {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   line-height: 9vw;
-  position: absolute; }
+  position: absolute;
+  width: 100%;
+  text-align: center; }
   @media only screen and (max-width: 37.5em) {
     .contact__title {
       font-size: 18vw;
@@ -481,6 +481,8 @@ a {
 .contact__message {
   width: 70vw;
   bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   color: var(--color-white);
   text-align: center;
@@ -524,7 +526,9 @@ a {
   position: absolute;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  text-align: center; }
+  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem; }
 
 .links {
   display: -webkit-box;
@@ -766,11 +770,4 @@ a {
 .contact {
   height: 90vh;
   width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center; }
+  position: relative; }
