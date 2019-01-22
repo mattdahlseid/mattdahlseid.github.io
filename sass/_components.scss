@@ -1,5 +1,5 @@
 ////////////////////////////////////////
-// HEADER
+// NAV
 .nav {
     list-style: none;
     font-size: 2rem;
@@ -96,6 +96,8 @@
     }
 }
 
+////////////////////////////////////////
+// HEADER
 .cutout {
     width: 110%;
     height: 110%;
@@ -104,8 +106,8 @@
     background-size: cover;
     background-position: center;
     z-index: 10;
-    margin-top: -2%;
     overflow: hidden;
+    margin: -2% auto 0 auto;
 
     @media only screen and (max-width: $bp-smallest) {
         width: 100%;
@@ -116,7 +118,11 @@
 .hero-img {
     width: 60%;
     height: 70%;
+    position: absolute;
     margin-top: 12rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     background-image: url("../img/glacier.jpg");
     background-size: cover;
     background-position: left;
@@ -126,12 +132,12 @@
     filter: contrast(120%);
 
     @media only screen and (max-width: $bp-medium) {
-        min-width: 85%;
+        width: 85%;
         background-position: center bottom; 
     }
 
     @media only screen and (max-width: $bp-small) {
-        min-width: 100%;
+        width: 100%;
         border: none;
         border-top: .5rem solid #000;
         border-bottom: .5rem solid #000;
@@ -142,17 +148,16 @@
 .square {
     width: 65%;
     height: 53%;
-    background: linear-gradient(to right, #35A926, #D5F21B);
     position: absolute;
     margin-top: 30rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #35A926, #D5F21B);
+    z-index: 1;
 
     @media only screen and (max-width: $bp-medium) {
-        min-width: 90%;
-        margin-top: 20rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        min-width: 90%;
+        width: 90%;
         margin-top: 25rem;
     }
 }
