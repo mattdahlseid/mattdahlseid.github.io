@@ -12,11 +12,11 @@
     width: 100%;
     min-height: 80rem;
     position: relative;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
+    // display: flex;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    // -webkit-align-items: center;
+    // align-items: center;
 
     @media only screen and (max-width: $bp-small) {
         height: 120vh;
