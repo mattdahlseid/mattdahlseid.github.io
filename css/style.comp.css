@@ -278,10 +278,13 @@ a {
   width: 22vw;
   height: 22vw;
   background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
-  transform: rotate(90deg);
   margin-left: -11vw;
   border: 2rem solid #000;
-  transition: all 1s; }
+  transition: all 1s;
+  position: absolute;
+  top: 30%;
+  transform: rotate(90deg) translateY(-30%);
+  z-index: 2; }
   @media (hover: hover) {
     .shape {
       box-shadow: 1rem -1rem 2rem rgba(0, 0, 0, 0.3); } }
@@ -290,38 +293,30 @@ a {
       display: none; } }
 
 .skills-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-evenly;
-  justify-content: space-evenly; }
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
   @media only screen and (max-width: 56.25em) {
     .skills-container {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      align-items: center; } }
-
-@supports (-ms-ime-align: auto) {
-  .skills {
-    /* Edge only (to address justify-content: space-evenly bug) */ }
-    .skills-container {
-      justify-content: space-around; } }
+      padding: 10rem 0;
+      width: 100%; } }
 
 .skills-box {
+  width: 50%;
   height: fit-content;
   text-align: center;
-  flex: 0 0 30rem; }
+  float: right; }
+  .skills-box:first-child {
+    float: left; }
   @media only screen and (max-width: 56.25em) {
     .skills-box {
-      width: auto; }
+      width: 100%;
+      float: auto; }
       .skills-box:first-child {
-        margin-bottom: 10rem; } }
+        margin-bottom: 10rem;
+        float: auto; } }
 
 .skills__title {
   font-family: 'Raleway', sans-serif;
@@ -490,7 +485,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  color: var(--color-white);
+  color: #fff;
   text-align: center;
   font-size: 2.5rem;
   line-height: 4rem; }
@@ -757,19 +752,12 @@ a {
 
 .skills {
   width: 100%;
-  padding: 20rem 0;
   overflow: hidden;
   position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center; }
+  height: 110vh; }
   @media only screen and (max-width: 56.25em) {
     .skills {
-      padding: 10rem 0; } }
+      height: 134vh; } }
 
 .work {
   width: 100%; }
@@ -777,11 +765,4 @@ a {
 .contact {
   height: 90vh;
   width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center; }
+  position: relative; }

@@ -318,10 +318,13 @@
     width: 22vw;
     height: 22vw;
     background: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
-    transform: rotate(90deg);
     margin-left: -11vw;
     border: 2rem solid #000;
     transition: all 1s;
+    position: absolute;
+    top: 30%;
+    transform: rotate(90deg) translateY(-30%);
+    z-index: 2;
 
     @media (hover: hover) {
         box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
@@ -335,42 +338,36 @@
 .skills {
 
     &-container {
-        width: 100%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-evenly;
-        justify-content: space-evenly;
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
 
         @media only screen and (max-width: $bp-medium) {
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-align-items: center;
-            align-items: center;
+            padding: 10rem 0;
+            width: 100%;
         }
     }
 
-    @supports (-ms-ime-align: auto) { 
-        /* Edge only (to address justify-content: space-evenly bug) */
-        &-container {
-            justify-content: space-around;
-        }
-    }
 
     &-box {
+        width: 50%;
         height: fit-content;
         text-align: center;
-        flex: 0 0 30rem;
+        float: right; 
+
+        &:first-child {
+            float: left;
+        }
 
         @media only screen and (max-width: $bp-medium) {
-            width: auto;
+            width: 100%;
+            float: auto;
 
             &:first-child {
                 margin-bottom: 10rem;
+                float: auto;
             }
         }
     }
@@ -597,7 +594,7 @@
         left: 50%;
         transform: translateX(-50%);
         position: absolute;
-        color: var(--color-white);
+        color: #fff;
         text-align: center;
         font-size: 2.5rem;
         line-height: 4rem;
