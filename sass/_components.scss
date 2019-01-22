@@ -362,8 +362,9 @@
     }
 
     &-box {
-        width: 30rem;
+        height: fit-content;
         text-align: center;
+        flex: 0 0 30rem;
 
         @media only screen and (max-width: $bp-medium) {
             width: auto;
@@ -434,6 +435,13 @@
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
+        -webkit-backface-visibility: hidden;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+
+        &:hover {
+            transform: translateX(-50%) translateY(-50%) scale(1.03);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,.6);
+        }
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 10vw;
