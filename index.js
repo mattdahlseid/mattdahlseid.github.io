@@ -70,7 +70,7 @@ function checkScroll() {
 
 // rotates shape on scroll
 function rotateShape() {
-    const rotateAt = (shape.offsetTop + shape.offsetHeight) * 2.5;
+    const rotateAt = (shape.offsetTop + shape.offsetHeight) * 2.25;
     if (window.scrollY > rotateAt) {
         shape.classList.add('rotate');
     }
