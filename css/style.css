@@ -773,34 +773,45 @@ a {
   width: 100%;
   position: relative; }
 
-  
-  /* ==========================================
-   ALL MOBILE OVERLAP PATCHES COMBINED
+/* ==========================================
+   ALL MOBILE OVERLAP PATCHES COMBINED (FIXED)
    ========================================== */
 @media only screen and (max-width: 56.25em) {
 
-  /* 1. Force the work section to flow naturally below skills */
-  .work {
-    position: static !important;
+  /* 1. Reset About section layout */
+  .about {
     height: auto !important;
-    padding-top: 10rem !important; 
+    min-height: 100vh !important;
     padding-bottom: 5rem !important;
-    display: block !important;
   }
 
-  /* 2. Fix the full-bleed title inside the work photos */
-  .work__title {
+  /* 2. Force Skills to expand to fit text */
+  .skills {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 10rem 0 !important;
+    overflow: visible !important;
     position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 2rem auto !important;
-    text-align: center !important;
-    width: 90% !important;
-    display: block !important;
   }
 
-  /* 3. Force the main work container and its subsets to stack natively */
+  .skills-container {
+    position: static !important;
+    transform: none !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .skills-box {
+    height: auto !important;
+    margin-bottom: 8rem !important;
+  }
+  
+  .skills-box:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* 3. Force the main Work containers to flow naturally below skills */
   .work,
   .web,
   .writings,
@@ -814,7 +825,7 @@ a {
     padding: 0 !important;
   }
 
-  /* 4. Fix the header background photo cards (Projects / Writings) */
+  /* 4. Fix full-bleed section banner text/photos (Projects / Writings banners) */
   .work__photo {
     position: relative !important;
     height: 30vh !important;
@@ -823,7 +834,6 @@ a {
     display: block !important;
   }
 
-  /* 5. Center the overlaid category text flags safely */
   .work__title {
     position: absolute !important;
     top: 50% !important;
@@ -831,16 +841,18 @@ a {
     transform: translate(-50%, -50%) !important;
     width: auto !important;
     font-size: 8vw !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 
-  /* 6. Let individual layout row items stretch and stack cleanly */
+  /* 5. Clean layout rows to stack into a neat phone list */
   .work__item {
     position: static !important;
     display: flex !important;
-    flex-direction: column !important; 
+    flex-direction: column !important;
     height: auto !important;
     width: 90% !important;
-    margin: 0 auto 8rem auto !important; 
+    margin: 0 auto 8rem auto !important;
     padding: 0 !important;
   }
 
@@ -848,15 +860,13 @@ a {
     margin-top: 2rem !important;
   }
 
-  /* 7. Fix text block wrappers inside rows */
   .work__item__content {
     position: static !important;
     width: 100% !important;
-    padding: 0 0 3rem 0 !important; 
+    padding: 0 0 3rem 0 !important;
     flex: none !important;
   }
 
-  /* 8. Fix full-width photo rendering inside rows */
   .work__item__photo {
     position: static !important;
     display: block !important;
@@ -868,4 +878,39 @@ a {
     flex: none !important;
   }
 
-} 
+  /* 6. Push Contact footer down cleanly below everything else */
+  .contact {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 10rem 0 15rem 0 !important;
+    position: relative !important;
+  }
+
+  .contact__message {
+    position: static !important;
+    transform: none !important;
+    margin: 4rem auto !important;
+    width: 85vw !important;
+  }
+
+  .contact__links {
+    position: static !important;
+    margin: 5rem auto !important;
+    display: block !important;
+  }
+
+  .contact .copyright {
+    position: static !important;
+    margin-top: 8rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .skills__title {
+    font-size: 3.8rem !important;
+  }
+  .skills ul {
+    font-size: 1.8rem !important;
+    line-height: 4rem !important;
+  }
+}
