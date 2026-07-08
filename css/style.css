@@ -772,69 +772,69 @@ a {
   height: 90vh;
   width: 100%;
   position: relative; }
-
+  
 /* ==========================================
    ALL MOBILE OVERLAP PATCHES COMBINED (FIXED)
    ========================================== */
 @media only screen and (max-width: 56.25em) {
 
-  /* 1. Reset About section layout */
-  .about {
+  /* 1. Force sections to unlock from fixed vh heights entirely */
+  body .about,
+  body .skills,
+  body .work,
+  body .contact {
     height: auto !important;
-    min-height: 100vh !important;
-    padding-bottom: 5rem !important;
-  }
-
-  /* 2. Force Skills to expand to fit text */
-  .skills {
-    height: auto !important;
-    min-height: 100vh !important;
-    padding: 10rem 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: static !important;
     overflow: visible !important;
-    position: relative !important;
+    transform: none !important;
   }
 
-  .skills-container {
+  /* 2. Give sections tight, normal padding layouts */
+  body .about {
+    padding: 6rem 0 !important;
+  }
+
+  body .skills {
+    padding: 6rem 0 !important;
+  }
+
+  body .skills-container {
     position: static !important;
     transform: none !important;
     width: 90% !important;
     margin: 0 auto !important;
-    padding: 0 !important;
   }
 
-  .skills-box {
+  body .skills-box {
     height: auto !important;
-    margin-bottom: 8rem !important;
+    margin-bottom: 4rem !important; /* Smaller gap between Skills and Tools */
   }
   
-  .skills-box:last-child {
+  body .skills-box:last-child {
     margin-bottom: 0 !important;
   }
 
-  /* 3. Force the main Work containers to flow naturally below skills */
-  .work,
-  .web,
-  .writings,
-  .work__container {
+  /* 3. Strip massive desktop margins from the work containers */
+  body .web,
+  body .writings,
+  body .work__container {
     position: static !important;
     height: auto !important;
-    min-height: auto !important;
-    transform: none !important;
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* 4. Fix full-bleed section banner text/photos (Projects / Writings banners) */
-  .work__photo {
+  /* 4. Fix full-bleed section headers (Projects / Writings banners) */
+  body .work__photo {
     position: relative !important;
-    height: 30vh !important;
-    margin-top: 4rem !important;
-    margin-bottom: 4rem !important;
-    display: block !important;
+    height: 20vh !important;
+    margin: 4rem 0 !important;
   }
 
-  .work__title {
+  body .work__title {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -842,74 +842,70 @@ a {
     width: auto !important;
     font-size: 8vw !important;
     margin: 0 !important;
-    text-align: center !important;
   }
 
-  /* 5. Clean layout rows to stack into a neat phone list */
-  .work__item {
+  /* 5. Tighten the layout items and fix the spacing gap */
+  body .work__item {
     position: static !important;
     display: flex !important;
     flex-direction: column !important;
     height: auto !important;
     width: 90% !important;
-    margin: 0 auto 8rem auto !important;
+    margin: 0 auto 4rem auto !important; /* Reduced from 8rem to a clean 40px gap */
     padding: 0 !important;
   }
 
-  .work__item:first-child {
+  body .work__item:first-child {
     margin-top: 2rem !important;
   }
 
-  .work__item__content {
+  body .work__item__content {
     position: static !important;
     width: 100% !important;
-    padding: 0 0 3rem 0 !important;
-    flex: none !important;
+    padding: 0 0 2rem 0 !important;
   }
 
-  .work__item__photo {
+  body .work__item__photo {
     position: static !important;
     display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
     height: auto !important;
-    max-height: 40vh !important;
+    max-height: 35vh !important;
     object-fit: cover !important;
-    flex: none !important;
   }
 
-  /* 6. Push Contact footer down cleanly below everything else */
-  .contact {
-    height: auto !important;
-    min-height: 100vh !important;
-    padding: 10rem 0 15rem 0 !important;
-    position: relative !important;
+  /* 6. Fix Contact footer spacing */
+  body .contact {
+    padding: 6rem 0 10rem 0 !important; /* Balanced bottom padding */
   }
 
-  .contact__message {
+  body .contact__message {
     position: static !important;
     transform: none !important;
-    margin: 4rem auto !important;
+    margin: 3rem auto !important;
     width: 85vw !important;
+    font-size: 2rem !important;
+    line-height: 3.2rem !important;
   }
 
-  .contact__links {
+  body .contact__links {
     position: static !important;
-    margin: 5rem auto !important;
+    margin: 3rem auto !important;
     display: block !important;
+    height: auto !important;
   }
 
-  .contact .copyright {
+  body .contact .copyright {
     position: static !important;
-    margin-top: 8rem !important;
+    margin-top: 4rem !important;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .skills__title {
+  body .skills__title {
     font-size: 3.8rem !important;
   }
-  .skills ul {
+  body .skills ul {
     font-size: 1.8rem !important;
     line-height: 4rem !important;
   }
