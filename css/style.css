@@ -772,3 +772,48 @@ a {
   height: 90vh;
   width: 100%;
   position: relative; }
+
+  /* ==========================================
+   PORTFOLIO MOBILE RESPONSIVE STRUCTURAL PATCH
+   ========================================== */
+
+@media only screen and (max-width: 56.25em) {
+  /* 1. Free the main skills section from rigid viewport heights */
+  .skills {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 8rem 0;
+    overflow: visible;
+  }
+
+  /* 2. Strip absolute positioning so elements flow natively stack-wise */
+  .skills-container {
+    position: static !important;
+    transform: none !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* 3. Allow your flex/floated list boxes to stretch down naturally */
+  .skills-box {
+    height: auto !important;
+    margin-bottom: 6rem;
+  }
+  
+  .skills-box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* Extra breathing room for smaller smartphone viewports */
+  .skills__title {
+    font-size: 3.8rem !important;
+  }
+  
+  .skills ul {
+    font-size: 1.8rem !important;
+    line-height: 4rem !important;
+  }
+}
