@@ -773,65 +773,22 @@ a {
   width: 100%;
   position: relative; }
 
+  
   /* ==========================================
-   PORTFOLIO MOBILE RESPONSIVE STRUCTURAL PATCH
-   ========================================== */
-
-@media only screen and (max-width: 56.25em) {
-  /* 1. Free the main skills section from rigid viewport heights */
-  .skills {
-    height: auto !important;
-    min-height: 100vh;
-    padding: 8rem 0;
-    overflow: visible;
-  }
-
-  /* 2. Strip absolute positioning so elements flow natively stack-wise */
-  .skills-container {
-    position: static !important;
-    transform: none !important;
-    width: 90% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-  }
-
-  /* 3. Allow your flex/floated list boxes to stretch down naturally */
-  .skills-box {
-    height: auto !important;
-    margin-bottom: 6rem;
-  }
-  
-  .skills-box:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  /* Extra breathing room for smaller smartphone viewports */
-  .skills__title {
-    font-size: 3.8rem !important;
-  }
-  
-  .skills ul {
-    font-size: 1.8rem !important;
-    line-height: 4rem !important;
-  }
-}
-
-/* ==========================================
-   WORK SECTION MOBILE OVERLAP PATCH
+   ALL MOBILE OVERLAP PATCHES COMBINED
    ========================================== */
 @media only screen and (max-width: 56.25em) {
+
   /* 1. Force the work section to flow naturally below skills */
   .work {
     position: static !important;
     height: auto !important;
-    padding-top: 10rem !important; /* Creates a clean gap below skills */
+    padding-top: 10rem !important; 
     padding-bottom: 5rem !important;
     display: block !important;
   }
 
-  /* 2. Fix the full-bleed title inside the work photos if they are overlapping */
+  /* 2. Fix the full-bleed title inside the work photos */
   .work__title {
     position: relative !important;
     top: auto !important;
@@ -842,4 +799,73 @@ a {
     width: 90% !important;
     display: block !important;
   }
-}
+
+  /* 3. Force the main work container and its subsets to stack natively */
+  .work,
+  .web,
+  .writings,
+  .work__container {
+    position: static !important;
+    height: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 4. Fix the header background photo cards (Projects / Writings) */
+  .work__photo {
+    position: relative !important;
+    height: 30vh !important;
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+    display: block !important;
+  }
+
+  /* 5. Center the overlaid category text flags safely */
+  .work__title {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: auto !important;
+    font-size: 8vw !important;
+  }
+
+  /* 6. Let individual layout row items stretch and stack cleanly */
+  .work__item {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important; 
+    height: auto !important;
+    width: 90% !important;
+    margin: 0 auto 8rem auto !important; 
+    padding: 0 !important;
+  }
+
+  .work__item:first-child {
+    margin-top: 2rem !important;
+  }
+
+  /* 7. Fix text block wrappers inside rows */
+  .work__item__content {
+    position: static !important;
+    width: 100% !important;
+    padding: 0 0 3rem 0 !important; 
+    flex: none !important;
+  }
+
+  /* 8. Fix full-width photo rendering inside rows */
+  .work__item__photo {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 40vh !important;
+    object-fit: cover !important;
+    flex: none !important;
+  }
+
+} 
