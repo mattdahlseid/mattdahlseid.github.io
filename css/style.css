@@ -817,3 +817,29 @@ a {
     line-height: 4rem !important;
   }
 }
+
+/* ==========================================
+   WORK SECTION MOBILE OVERLAP PATCH
+   ========================================== */
+@media only screen and (max-width: 56.25em) {
+  /* 1. Force the work section to flow naturally below skills */
+  .work {
+    position: static !important;
+    height: auto !important;
+    padding-top: 10rem !important; /* Creates a clean gap below skills */
+    padding-bottom: 5rem !important;
+    display: block !important;
+  }
+
+  /* 2. Fix the full-bleed title inside the work photos if they are overlapping */
+  .work__title {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 2rem auto !important;
+    text-align: center !important;
+    width: 90% !important;
+    display: block !important;
+  }
+}
