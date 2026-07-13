@@ -765,7 +765,7 @@ a {
   @media only screen and (max-width: 56.25em) {
     .skills {
       height: 180vh;
-      min-height: 134vh; } }
+      min-height: 160vh; } }
 
 .work {
   width: 100%; }
