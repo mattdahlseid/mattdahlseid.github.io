@@ -425,7 +425,9 @@ a {
     @media only screen and (max-width: 37.5em) {
       .work__item__photo {
         max-width: 95%;
-        flex: 1 1 95%; } }
+        flex: 1 1 95%; 
+        flex-shrink: 0;
+        max-height: 50vh;} }
     .work__item__photo:hover {
       transform: translateY(-1rem) scale(1.02); }
   .work__item__content {
