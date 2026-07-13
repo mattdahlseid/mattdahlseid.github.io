@@ -412,7 +412,7 @@ a {
     .work__item {
       padding: 0 8%; } }
   .work__item__photo {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     max-width: 50%;
     flex: 1 1 50%;
@@ -425,6 +425,7 @@ a {
     @media only screen and (max-width: 37.5em) {
       .work__item__photo {
         max-width: 95%;
+        height: 100%;
         flex: 1 1 95%; } }
     .work__item__photo:hover {
       transform: translateY(-1rem) scale(1.02); }
