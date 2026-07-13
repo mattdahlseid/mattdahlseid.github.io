@@ -758,12 +758,14 @@ a {
 
 .skills {
   width: 100%;
-  overflow: hidden;
   position: relative;
-  height: 110vh; }
+  height: 110vh;
+  min-height: 80rem;
+ }
   @media only screen and (max-width: 56.25em) {
     .skills {
-      height: 134vh; } }
+      height: 180vh;
+      min-height: 134vh; } }
 
 .work {
   width: 100%; }
