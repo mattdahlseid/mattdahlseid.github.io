@@ -265,17 +265,17 @@ a {
     line-height: 8rem;
     color: white; }
   .bio__text {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: var(--color-white);
     margin-top: 2rem;
-    line-height: 3.8rem;
+    line-height: 4rem;
     letter-spacing: .2rem;
     -webkit-text-shadow: 0 1rem 1rem black;
     text-shadow: 0 0.3rem 1rem black; }
     @media only screen and (max-width: 37.5em) {
       .bio__text {
-        font-size: 1.4rem;
-        line-height: 3rem; } }
+        font-size: 1.75rem;
+        line-height: 3.2rem; } }
 
 .shape {
   width: 22vw;
