@@ -441,7 +441,8 @@ a {
         margin: 5rem 0 10rem 0; } }
     @media only screen and (max-width: 37.5em) {
       .work__item__content {
-        width: 100%; } }
+        width: 100%; 
+      } }
   .work__item__cat {
     margin-bottom: 2rem; }
   .work__item__title {
